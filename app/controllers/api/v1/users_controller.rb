@@ -5,9 +5,14 @@ class Api::V1::UsersController < ApplicationController
         render json: user
     end
 
+    def index
+        users = User.all
+        render json: users
+    end
+
     private
 
     def user_params
-        params.require(:user).permit(:name, :email, :password_digest)
+        params.require(:user).permit(:name, :email, :password)
     end
 end
