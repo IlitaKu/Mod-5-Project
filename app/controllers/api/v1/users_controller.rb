@@ -1,27 +1,43 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized, only: [:create]
-
-    def profile
-        render json: { user: UserSerializer.new(current_user) }, status: :accepted
-    end
 
     def create
-        @user = User.create(user_params)
-        if @user.valid?
-            @token = encode_token(user_id: @user_id)
-            render json: { user: UserSerializer.new(@user), jwt: @token}, status: :created
-        else 
-            render json: {error: 'failed to create user'}, status: :not_acceptable
+        user = User.create(user_params)
+        if user.valid?
+            render json: { user: UserSerializer.new(user), token: issue_token({ user_id: user.id }) }
+        else
+            render json: { errors: user.errors.full_messages }, status: :not_accepted
+        end
     end
-end
-    def index
-        @users = User.all
-        render json: @users
+
+    def login
+        user = User.find_by(email: login_params[:email])
+        if user && user.authenticate(login_params[:password])
+            render json: { user: UserSerializer.new(user), token: issue_token({ user_id: user.id }) }
+        else
+            render json: { errors: ["Email or password incorrect"] }, status: :not_accepted
+        end
+    end
+
+    def show
+        user = User.find(params[:id])
+        render json: user
+    end
+
+    def validate
+        if logged_in
+            render json: { user: UserSerializer.new(@current_user), token: issue_token({ user_id: @current_user.id }) }
+        else
+            render json: { errors: ['Invalid token']}, status: :not_accepted
+        end
     end
 
     private
 
     def user_params
-        params.require(:user).permit(:name, :email, :password)
+        params.require(:user).permit(:email, :password, :password_confirmation)
+    end
+
+    def login_params
+        params.require(:user).permit(:email, :password)
     end
 end
