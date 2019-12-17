@@ -5,7 +5,8 @@ Rails.application.routes.draw do
       resources :users, only: [:create, :index]
       post '/login', to: 'users#login'
       get '/validate', to: 'users#validate'
-      resources :user_recipes
+      resources :user_recipes, only: [:create, :index]
+      resources :ingredients, only: [:create, :index]
     end
   end
   # resources :UserRecipe, only: [:create]
