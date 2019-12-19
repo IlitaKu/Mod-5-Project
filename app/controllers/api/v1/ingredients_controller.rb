@@ -11,11 +11,11 @@ class Api::V1::IngredientsController < ApplicationController
 
 
 
-    # def show
-    #     ingredient = User.find(params[:id])
-    #     ingredients =  ingredient.ingredient
-    #     render json: ingredients
-    # end
+    def show
+        user = User.find(params[:id])
+        ingredients =  user.ingredients
+        render json: ingredients
+    end
 
  
     private
