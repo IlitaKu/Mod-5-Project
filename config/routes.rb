@@ -4,8 +4,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       # root 'users#login'
-      post '/login', to: 'users#login'
-      get '/validate', to: 'users#validate'
+      post 'https://fridgerr.herokuapp.com/api/v1/login', to: 'users#login'
+      get 'https://fridgerr.herokuapp.com/api/v1/validate', to: 'users#validate'
       resources :user_recipes, only: [:create, :index]
       resources :ingredients
     end
