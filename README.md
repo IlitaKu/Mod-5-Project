@@ -1,6 +1,7 @@
 # README
 
-![Fridger Demo](gif(1).gif)
+Project demo can be seen on:
+https://youtu.be/1S14aiOunv8
 
 
 
