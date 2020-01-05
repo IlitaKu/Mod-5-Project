@@ -1,7 +1,6 @@
 # README
 
-
-![](name-of-giphy.gif)
+![](gif(1).gif)
 https://gifs.com/gif/fridger-k8gqwN
 
 This README would normally document whatever steps are necessary to get the
