@@ -1,6 +1,7 @@
 # README
 
-![Fridger Demo](gif(1).gif)
+![Fridger Demo](gif (1).gif)
+
 
 
 This README would normally document whatever steps are necessary to get the
