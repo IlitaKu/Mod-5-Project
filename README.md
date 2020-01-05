@@ -1,7 +1,8 @@
 # README
 
 
-[<iframe src='//gifs.com/embed/fridger-k8gqwN' frameborder='0' scrolling='no' width='640px' height='456px' style='-webkit-backface-visibility: hidden;-webkit-transform: scale(1);' ></iframe>]
+![](name-of-giphy.gif)
+https://gifs.com/gif/fridger-k8gqwN
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
