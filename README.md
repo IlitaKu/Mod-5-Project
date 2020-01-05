@@ -1,6 +1,6 @@
 # README
 
-![Fridger Demo](gif (1).gif)
+![Fridger Demo](gif(1).gif)
 
 
 
