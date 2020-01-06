@@ -16,13 +16,13 @@ Should get their own API key from spoonacular.com and replace it in home.js file
 
 # Main commands
 
-# Install the dependencies
+Install the dependencies
 npm install
 
-# Run server ( http://localhost:3000 )
+Run server ( http://localhost:3000 )
 rails server
 
-# Run website in dev (hot reload) mode ( http://localhost:3001 )
+Run website in dev (hot reload) mode ( http://localhost:3001 )
 npm start
 
 
