@@ -10,11 +10,11 @@ App also allows users to search recipes by entering a list of ingredients, save 
 # Project Demo
 https://youtu.be/1S14aiOunv8
 
-How to use
+# How to use
 User should clone the repo or fork the fridger-backend and fridger-frontend to their local environment separately. 
 Should get their own API key from spoonacular.com and replace it in home.js file. 
 
-# Main commands
+Main commands
 
 Install the dependencies
 npm install
