@@ -1,17 +1,33 @@
+
 # README
-
 # Fridger
-Uses SpoonaculaR API and lets users search for reccipes by ingredients and save them to their profile. Also fridger allwos users to save their fridge content and offers recipe suggestions based on the oldest items in the fridge shelf.
 
-# Motivation
+Fridger is a user friendly app that helps users to turn ingredients in the fridge into healthy delicious meals. 
+It uses SpoonaculaR API to offer recipe suggestions based on the oldest items saved in the Fridger shelf.
+App also allows users to search recipes by entering a list of ingredients, save recipes that they liked.
 
-The motivation behind this project is to demonstarte understanding and learnig React. Aswell as creating internal and using external API's. 
 
-# Project Demo 
+# Project Demo
 https://youtu.be/1S14aiOunv8
 
-# How to use 
+How to use
+User should clone the repo or fork the fridger-backend and fridger-frontend to their local environment separately. 
+Should get their own API key from spoonacular.com and replace it in home.js file. 
 
-User should clone the repo or fork the fridger-backend and fridger-frontend to their local environment separately. Should get their own API key from spoonacular.com and replace it in home.js file. The backend will need to be running on //http.localhost:3000, enter command rails server in the terminal to start the server. Frontend - in the terminal enter command npm install and then npm start.
+# Main commands
+
+# Install the dependencies
+npm install
+
+# Run server ( http://localhost:3000 )
+rails server
+
+# Run website in dev (hot reload) mode ( http://localhost:3001 )
+npm start
 
 
+View the Front-End code here:(https://github.com/IlitaKu/Mod-5-Project-Front-End)
+Technologies used on Client Side
+React CSS
+Back End
+Ruby on Rails, Active record, Postgres, SpoonaculaR API to fetch recipe ideas Deployed on Heroku.
